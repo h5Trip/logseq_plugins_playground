@@ -1,0 +1,19 @@
+
+.app {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    .app-wrapper {
+        width: 20%;
+        margin-top: 48px;
+        margin-right: 16px;
+        height: calc(100% - 48px);
+        .app-list {
+            background: #efefef;
+            padding: 8px;
+            border-radius: 8px;
+        }
+    }
+}
