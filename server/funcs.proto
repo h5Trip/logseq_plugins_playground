@@ -1,6 +1,0 @@
-syntax = "proto3";
-import "models.proto";
-
-service Funcs {
-    rpc downloadImageToSave(DownloadImageRequest) returns (DownloadImageRespond);
-}
