@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"net"
 
@@ -21,8 +22,9 @@ type FuncsServer struct {
 
 // 实现 downloadImageToSave 方法
 func (f *FuncsServer) DownloadImageToSave(ctx context.Context, req *pb.DownloadImageRequest) (*pb.DownloadImageRespond, error) {
+	fmt.Print(req)
 	return &pb.DownloadImageRespond{Respond: &pb.Respond{
-		Code: 0, Error: "", Message: "",
+		Code: 0, Error: "nil", Message: "hello",
 	}, DownloadImageRequest: req}, nil
 }
 

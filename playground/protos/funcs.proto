@@ -1,0 +1,23 @@
+syntax = "proto3";
+option go_package = "./";
+// import "models.proto";
+
+message Respond {
+    int32 code = 1;
+    string error = 2;
+    string message = 3;
+}
+
+message DownloadImageRequest {
+    repeated string urls = 1;
+    string savePath = 2;
+}
+
+message DownloadImageRespond {
+    Respond respond = 1;
+    DownloadImageRequest downloadImageRequest = 2;
+}
+
+service Funcs {
+    rpc downloadImageToSave(DownloadImageRequest) returns (DownloadImageRespond);
+}
